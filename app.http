@@ -1,0 +1,50 @@
+POST http://localhost:4000/newuser
+Content-Type: application/json
+
+{
+    "name" : "Teddy",
+    "email" : "teddy143@gmail.com",
+    "password" : "Teddy@123",
+    "address" : "paulis street, mehdipatnam,Hyderabad,500089",
+    "role" : "Normal User"
+}
+
+###
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "email" : "teddy143@gmail.com",
+    "password" : "Teddy@123"
+}
+
+###
+GET http://localhost:4000/allcount
+
+###
+GET http://localhost:4000/users?name=a&address=&email=&role=Store%20Owner&role=Normal%20User
+
+###
+GET http://localhost:4000/stores?name=&address=&rating=0
+
+###
+PATCH http://localhost:4000/passwordupdate/1002
+Content-Type: application/json
+
+{
+    "password" : "Sharma@1234"
+}
+
+###
+GET http://localhost:4000/userdata/1002
+
+###
+PUT http://localhost:4000/update-rating/1002/2001
+Content-Type: application/json
+
+{
+    "rating" : "3"
+}
+
+###
+GET http://localhost:4000/storeOwner/2002
